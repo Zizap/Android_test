@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_backgr"></ImageView>
+    <LinearLayout
+        android:id="@+id/binEnterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/BINcode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="BIN"
+            android:textColorHint="@color/gray"
+            android:background="@drawable/style_edtext"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:inputType="number">
+
+        </EditText>
+
+
+
+        <Button
+            android:id="@+id/buttGO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO"
+            android:textColor="@color/white"
+            android:background="@drawable/style_button"
+            android:textSize="20sp">
+
+        </Button>
+    </LinearLayout>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/binEnterLayout"
+    >
+
+    <ListView
+        android:id="@+id/historyList"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:layout_marginLeft="10dp"
+        >
+
+    </ListView>
+
+</FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/schemeNetworkLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/binEnterLayout"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCHEME / NETWORK"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/scheme"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/style_edtext"
+            android:gravity="center"
+            android:text="-----------------"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schemeNetworkLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TYPE"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/style_edtext"
+            android:gravity="center"
+            android:text="-----------------"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BrandLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TypeLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BRAND"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/style_edtext"
+            android:gravity="center"
+            android:text="-----------------"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PrepaidLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BrandLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/textprep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PREPAID"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+        <CheckBox
+            android:id="@+id/prepaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/style_checkbox"
+            android:clickable="false"
+            >
+
+        </CheckBox>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BankLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PrepaidLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BANK"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/bank"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/style_edtext"
+            android:gravity="center"
+            android:text="-----------------"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CardNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BankLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LENGTH"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/style_edtext"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/textluhn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LUHN"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"></TextView>
+
+        <CheckBox
+            android:id="@+id/luhn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/style_checkbox"
+            android:clickable="false">
+
+        </CheckBox>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CountryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CardNumberLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COUNTRY"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/style_edtext"
+            android:gravity="center"
+            android:text="-----------------"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CountryLayout"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="latitude"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/style_edtext"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="longitude"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"></TextView>
+
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/style_edtext"
+            android:gravity="center"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+
+    </LinearLayout>
+</RelativeLayout>
